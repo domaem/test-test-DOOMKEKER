@@ -67,7 +67,7 @@ jobs:
         env: 
           BASE_URL: "http://localhost:8080"
         run: |
-          agoge-cli e2e-tests --task=agoge-e2e-shop --base-url=${BASE_URL}
+          ./tests/agoge-cli e2e-tests --task=agoge-e2e-shop --base-url=${BASE_URL}
 
       - name: Stop services (always)
         if: always()
