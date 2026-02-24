@@ -65,9 +65,11 @@ jobs:
         env:
           BASE_URL: "http://localhost:8080"
         with:
-          points: 5
+          test-name: Run e2e tests and grade
+          max-score: 5
           timeout: 1800
-          run: |
+          setup-command: ''
+          command: |
             set +e
 
             sudo apt-get update -qq
