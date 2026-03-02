@@ -69,7 +69,8 @@ jobs:
           max-score: 5
           timeout: 1800
           setup-command: ''
-          command: |
+          command: >
+            bash -lc '
             set +e
 
             sudo apt-get update -qq
@@ -135,6 +136,7 @@ jobs:
 
             # Всегда успешно завершаем шаг, чтобы оценка прошла
             exit 0
+            '
 
       # 👇 Artifacts: JSON + log
       - name: Upload autograding artifacts
