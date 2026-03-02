@@ -76,7 +76,7 @@ jobs:
             sudo apt-get install -y jq
 
             echo "Running e2e..."
-            ./tests/agoge-cli e2e-tests --task=agoge-e2e-shop --base-url=${{ env.BASE_URL }} 2>&1 | tee e2e-output.txt > result.json
+            ./tests/agoge-cli e2e-tests --task=agoge-e2e-shop --json --base-url=${{ env.BASE_URL }} 2>&1 | tee e2e-output.txt > result.json
             TEST_EXIT=${PIPESTATUS[0]}
 
             SCORE=0
